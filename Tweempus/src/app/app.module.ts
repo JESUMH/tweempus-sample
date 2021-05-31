@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 // Importamos el modulo core
 import { CoreModule } from './core/core.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +15,8 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
