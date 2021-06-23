@@ -7,5 +7,5 @@ import { Twimp } from '../twimp.model';
   styleUrls: ['./twimp-card.component.css']
 })
 export class TwimpCardComponent {
-  @Input() twimp: Twimp;
+  @Input() twimp: any;
 }

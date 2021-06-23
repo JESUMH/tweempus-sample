@@ -7,16 +7,19 @@ import { AppComponent } from './app.component';
 // Importamos el modulo core
 import { CoreModule } from './core/core.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { LoginModule } from './login/login.module';
+import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
-
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
+    LoginModule,
+    ProfileModule,
     DashboardModule,
     SharedModule
   ],
