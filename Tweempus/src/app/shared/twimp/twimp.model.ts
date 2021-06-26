@@ -1,4 +1,4 @@
-import { Author } from '../author.model';
+import { Author } from '../author/author-card/author.model';
 
 export class Twimp {
   private _id: string;
@@ -8,13 +8,13 @@ export class Twimp {
   private _timestamp: string;
   private _favorite: boolean;
 
-  constructor(id: string, url: string, author: Author, content: string, timestamp: string, favorite: boolean) {
+  constructor(id: string, url: string, author: Author, content: string, timestamp: string) {
     this._id = id;
     this._url = url;
     this._author = author;
     this._content = content;
     this._timestamp = timestamp;
-    this._favorite = favorite;
+    this._favorite = false;
   }
 
   public get id(): string {
