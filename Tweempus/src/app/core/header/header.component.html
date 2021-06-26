@@ -1,4 +1,5 @@
 <section class="section_header">
   <h2 class="header_title">Tweempus</h2>
-  <button class="header_auth">Regístrate</button>
+  <button class="header_auth" *ngIf="!checkLogin()">Regístrate</button>
+  <button class="header_auth" *ngIf="checkLogin()" (click)="logout()">Cerrar sesión</button>
 </section>
