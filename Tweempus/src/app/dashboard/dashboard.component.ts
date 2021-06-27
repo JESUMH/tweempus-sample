@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import { AuthorService } from '../shared/author/author.service';
 import { Twimp } from '../shared/twimp/twimp.model';
 import { TwimpService } from '../shared/twimp/twimp.service';

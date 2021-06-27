@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 // Importamos el modulo core
 import { CoreModule } from './core/core.module';
+import { CreateTwimpModule } from './create-twimp/create-twimp.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { LoginModule } from './login/login.module';
 import { ProfileModule } from './profile/profile.module';
@@ -21,7 +22,8 @@ import { SharedModule } from './shared/shared.module';
     LoginModule,
     ProfileModule,
     DashboardModule,
-    SharedModule
+    SharedModule,
+    CreateTwimpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

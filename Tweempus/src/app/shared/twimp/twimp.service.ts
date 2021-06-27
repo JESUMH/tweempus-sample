@@ -19,7 +19,7 @@ export class TwimpService {
     return this.httpClient.get(this.url).pipe(
       map((dbTwimpList: any) => {
         for(let i in dbTwimpList) {
-          let twimp: Twimp = new Twimp(dbTwimpList[i].id, 'localhost:/4200/twimp/' + dbTwimpList[i].id,
+          let twimp: Twimp = new Twimp(dbTwimpList[i].id, 'localhost:4200/twimp/' + dbTwimpList[i].id,
           new Author(dbTwimpList[i].author),dbTwimpList[i].content, dbTwimpList[i].timestamp);
           twimps.push(twimp);
         }
@@ -40,6 +40,18 @@ export class TwimpService {
         return response;
       })
     );
+  }
+
+  setTwimp(twimp: Twimp): Observable<any> {
+    let dbTwimp: any = {
+      'id': twimp.id,
+      'author': twimp.author,
+      'by': twimp.author.fullName,
+      'content': twimp.content,
+      'timestamp': twimp.timestamp
+    }
+
+    return this.httpClient.post(this.url, dbTwimp);
   }
 
   handleError(error: any) {
